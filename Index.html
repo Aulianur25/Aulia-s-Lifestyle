@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Aulia's Lifestyle 🎀</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    /* =========================
+       GLOBAL
+    ========================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: #5c4650;
+
+      background:
+        radial-gradient(
+          circle at top left,
+          #f8dce7,
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at bottom right,
+          #fceef3,
+          transparent 35%
+        ),
+        #fffaf6;
+
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+
+      background: rgba(255, 250, 246, 0.9);
+
+      backdrop-filter: blur(15px);
+
+      border-bottom: 1px solid #f0d7e0;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: auto;
+
+      padding: 15px 25px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 30px;
+      font-weight: bold;
+
+      color: #a95772;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 25px;
+
+      font-size: 14px;
+    }
+
+    .nav-menu a {
+      transition: 0.3s;
+    }
+
+    .nav-menu a:hover {
+      color: #b85f7d;
+    }
+
+    /* =========================
+       GENERAL
+    ========================= */
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+
+      padding: 100px 25px;
+    }
+
+    .section-title {
+      text-align: center;
+
+      margin-bottom: 50px;
+    }
+
+    .section-title span {
+      font-size: 35px;
+    }
+
+    .section-title h2 {
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 55px;
+
+      color: #91536a;
+
+      margin: 5px 0;
+    }
+
+    .section-title p {
+      color: #866d77;
+    }
+
+    /* =========================
+       HOME
+    ========================= */
+
+    #home {
+      min-height: 90vh;
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      align-items: center;
+
+      gap: 60px;
+    }
+
+    .home-text small {
+      color: #b85f7d;
+
+      letter-spacing: 2px;
+
+      font-weight: bold;
+
+      text-transform: uppercase;
+    }
+
+    .home-text h1 {
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: clamp(60px, 8vw, 95px);
+
+      color: #91536a;
+
+      line-height: 0.95;
+
+      margin: 15px 0;
+    }
+
+    .home-text h1 em {
+      color: #c47793;
+    }
+
+    .home-text p {
+      max-width: 520px;
+
+      font-size: 17px;
+
+      color: #69555e;
+    }
+
+    .home-button {
+      display: inline-block;
+
+      margin-top: 25px;
+
+      padding: 13px 25px;
+
+      border-radius: 30px;
+
+      background: #91536a;
+
+      color: white;
+
+      transition: 0.3s;
+    }
+
+    .home-button:hover {
+      background: #b85f7d;
+
+      transform: translateY(-3px);
+    }
+
+    /* HOME PHOTO */
+
+    .home-photo {
+      position: relative;
+
+      max-width: 420px;
+
+      margin: auto;
+    }
+
+    .home-photo::before {
+      content: "";
+
+      position: absolute;
+
+      inset: -18px 18px 18px -18px;
+
+      border: 2px solid #edbccc;
+
+      border-radius: 50%;
+
+      transform: rotate(-7deg);
+    }
+
+    .home-photo img {
+      position: relative;
+
+      width: 100%;
+
+      aspect-ratio: 4 / 5;
+
+      object-fit: cover;
+
+      border-radius: 50% 50% 35% 35%;
+
+      box-shadow:
+        0 20px 50px rgba(120, 70, 90, 0.15);
+    }
+
+    /* =========================
+       BIODATA
+    ========================= */
+
+    .biodata-container {
+      display: grid;
+
+      grid-template-columns: 0.8fr 1.2fr;
+
+      gap: 30px;
+    }
+
+    .bio-card {
+      background: rgba(255,255,255,0.8);
+
+      padding: 35px;
+
+      border-radius: 30px;
+
+      border: 1px solid #f1dbe3;
+
+      box-shadow:
+        0 15px 40px rgba(150, 90, 110, 0.08);
+    }
+
+    .bio-card h3 {
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 35px;
+
+      color: #91536a;
+
+      margin-bottom: 15px;
+    }
+
+    .bio-list {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 15px;
+
+      margin-top: 20px;
+    }
+
+    .bio-item {
+      padding: 15px;
+
+      background: #fff0f5;
+
+      border-radius: 18px;
+    }
+
+    .bio-item span {
+      display: block;
+
+      font-size: 11px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1px;
+
+      color: #a56b7e;
+    }
+
+    .bio-item strong {
+      color: #5b4650;
+    }
+
+    /* =========================
+       LIFESTYLE
+    ========================= */
+
+    .lifestyle-grid {
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 25px;
+    }
+
+    .life-card {
+      overflow: hidden;
+
+      background: white;
+
+      border-radius: 28px;
+
+      border: 1px solid #f0dce4;
+
+      box-shadow:
+        0 15px 35px rgba(150, 90, 110, 0.08);
+    }
+
+    .life-card img {
+      width: 100%;
+
+      height: 230px;
+
+      object-fit: cover;
+    }
+
+    .life-content {
+      padding: 28px;
+    }
+
+    .life-content .number {
+      color: #b85f7d;
+
+      font-size: 13px;
+
+      font-weight: bold;
+
+      letter-spacing: 1px;
+    }
+
+    .life-content h3 {
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 32px;
+
+      color: #91536a;
+
+      margin: 5px 0 10px;
+    }
+
+    /* =========================
+       REKOMENDASI
+    ========================= */
+
+    .recommendation-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 20px;
+    }
+
+    .recommendation-card {
+      padding: 30px;
+
+      background: #fff;
+
+      border-radius: 25px;
+
+      border: 1px solid #f0d9e2;
+
+      text-align: center;
+
+      transition: 0.3s;
+
+      box-shadow:
+        0 12px 30px rgba(150, 90, 110, 0.07);
+    }
+
+    .recommendation-card:hover {
+      transform: translateY(-7px);
+    }
+
+    .recommendation-icon {
+      font-size: 45px;
+
+      margin-bottom: 10px;
+    }
+
+    .recommendation-card h3 {
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 30px;
+
+      color: #91536a;
+    }
+
+    .recommendation-card p {
+      font-size: 14px;
+
+      margin: 10px 0 20px;
+    }
+
+    .recommendation-card ul {
+      list-style: none;
+
+      font-size: 14px;
+
+      color: #755e68;
+    }
+
+    .recommendation-card li {
+      margin: 7px 0;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      text-align: center;
+
+      padding: 35px 20px;
+
+      color: #9b7482;
+
+      font-size: 13px;
+
+      border-top: 1px solid #f0dce4;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 800px) {
+
+      .nav-menu {
+        display: none;
+      }
+
+      #home {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        padding-top: 70px;
+      }
+
+      .home-text p {
+        margin: auto;
+      }
+
+      .biodata-container {
+        grid-template-columns: 1fr;
+      }
+
+      .lifestyle-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .recommendation-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+    @media (max-width: 500px) {
+
+      section {
+        padding: 70px 20px;
+      }
+
+      .bio-list {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title h2 {
+        font-size: 45px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       NAVBAR
+  ========================= -->
+
+  <nav>
+
+    <div class="nav-container">
+
+      <a href="#home" class="logo">
+        Aulia 🎀
+      </a>
+
+      <div class="nav-menu">
+
+        <a href="#home">Home</a>
+
+        <a href="#biodata">Biodata</a>
+
+        <a href="#lifestyle">Lifestyle</a>
+
+        <a href="#rekomendasi">Rekomendasi</a>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+
+  <!-- =========================
+       HOME
+  ========================= -->
+
+  <section id="home">
+
+    <div class="home-text">
+
+      <small>
+        Welcome to my little world ♡
+      </small>
+
+      <h1>
+        Soft life,
+        <br>
+        <em>pretty moments.</em>
+      </h1>
+
+      <p>
+        Hai! Aku Aulia. Selamat datang di blog kecilku,
+        tempat aku berbagi cerita tentang lifestyle,
+        beauty, fashion, keseharian, dan berbagai rekomendasi
+        yang membuat hidup terasa lebih menyenangkan.
+      </p>
+
+      <a
+        href="#biodata"
+        class="home-button"
+      >
+        Get to know me 🎀
+      </a>
+
+    </div>
+
+
+    <div class="home-photo">
+
+      <!--
+        GANTI DENGAN FOTO KAMU
+
+        Masukkan foto ke folder:
+
+        assets/foto-aulia.jpg
+      -->
+
+      <img
+        src="assets/foto-aulia.jpg"
+        alt="Foto Aulia Nur Oktapiyani"
+      >
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       BIODATA
+  ========================= -->
+
+  <section id="biodata">
+
+    <div class="section-title">
+
+      <span>🎀</span>
+
+      <h2>
+        About Me
+      </h2>
+
+      <p>
+        A little introduction about myself.
+      </p>
+
+    </div>
+
+
+    <div class="biodata-container">
+
+
+      <div class="bio-card">
+
+        <h3>
+          Hello, I'm Aulia ♡
+        </h3>
+
+        <p>
+          Aku adalah mahasiswa yang sedang menikmati proses
+          belajar, bertumbuh, dan menemukan hal-hal kecil
+          yang membuat kehidupan sehari-hari terasa lebih
+          menyenangkan.
+        </p>
+
+        <p style="margin-top:15px;">
+          Blog ini menjadi ruang kecil untuk berbagi cerita,
+          inspirasi, beauty, fashion, lifestyle, dan berbagai
+          rekomendasi yang dekat dengan kehidupan sehari-hari.
+        </p>
+
+      </div>
+
+
+      <div class="bio-card">
+
+        <h3>
+          Biodata
+        </h3>
+
+        <div class="bio-list">
+
+
+          <div class="bio-item">
+
+            <span>Nama</span>
+
+            <strong>
+              Aulia Nur Oktapiyani
+            </strong>
+
+          </div>
+
+
+          <div class="bio-item">
+
+            <span>Usia</span>
+
+            <strong>
+              20 Tahun
+            </strong>
+
+          </div>
+
+
+          <div class="bio-item">
+
+            <span>Tempat Tinggal</span>
+
+            <strong>
+              Bogor
+            </strong>
+
+          </div>
+
+
+          <div class="bio-item">
+
+            <span>Kampus</span>
+
+            <strong>
+              Universitas Islam Negeri Jakarta
+            </strong>
+
+          </div>
+
+
+          <div class="bio-item">
+
+            <span>Jurusan</span>
+
+            <strong>
+              Manajemen Pendidikan
+            </strong>
+
+          </div>
+
+
+          <div class="bio-item">
+
+            <span>Email</span>
+
+            <strong>
+              aulianuroktapiyani@gmail.com
+            </strong>
+
+          </div>
+
+
+          <div class="bio-item">
+
+            <span>No. Telepon</span>
+
+            <strong>
+              085882501716
+            </strong>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       LIFESTYLE
+  ========================= -->
+
+  <section id="lifestyle">
+
+    <div class="section-title">
+
+      <span>🌷</span>
+
+      <h2>
+        My Lifestyle
+      </h2>
+
+      <p>
+        Little routines that make my days feel better.
+      </p>
+
+    </div>
+
+
+    <div class="lifestyle-grid">
+
+
+      <!-- DAILY LIFE -->
+
+      <article class="life-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1474418397713-7e7f6b7a4a36?auto=format&fit=crop&w=1200&q=85"
+          alt="Daily life"
+        >
+
+        <div class="life-content">
+
+          <span class="number">
+            01 · DAILY LIFE
+          </span>
+
+          <h3>
+            My Daily Routine
+          </h3>
+
+          <p>
+            Keseharianku dimulai pada pagi hari dengan ibadah,
+            kemudian dilanjutkan dengan olahraga ringan.
+            Setelah itu aku mandi dan sarapan sebelum bersiap
+            untuk berangkat kuliah.
+          </p>
+
+          <p style="margin-top:10px;">
+            Pada malam hari, biasanya aku menyempatkan waktu
+            untuk skincare, beristirahat, dan tidur agar bisa
+            kembali fresh untuk menjalani hari berikutnya.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- BEAUTY & FASHION -->
+
+      <article class="life-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=85"
+          alt="Beauty and fashion"
+        >
+
+        <div class="life-content">
+
+          <span class="number">
+            02 · BEAUTY & FASHION
+          </span>
+
+          <h3>
+            Clean & Natural
+          </h3>
+
+          <p>
+            Untuk fashion, aku suka gaya
+            <b>clean look</b>
+            yang sederhana, rapi, dan mudah dipadukan.
+          </p>
+
+          <p style="margin-top:10px;">
+            Sedangkan untuk makeup, aku lebih menyukai
+            <b>natural look</b> yang membuat wajah terlihat
+            fresh dan tetap nyaman digunakan untuk aktivitas
+            sehari-hari.
+          </p>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       REKOMENDASI
+  ========================= -->
+
+  <section id="rekomendasi">
+
+    <div class="section-title">
+
+      <span>💌</span>
+
+      <h2>
+        My Recommendations
+      </h2>
+
+      <p>
+        Little things worth trying.
+      </p>
+
+    </div>
+
+
+    <div class="recommendation-grid">
+
+
+      <!-- BEAUTY -->
+
+      <div class="recommendation-card">
+
+        <div class="recommendation-icon">
+          💄
+        </div>
+
+        <h3>
+          Beauty
+        </h3>
+
+        <p>
+          Rekomendasi beauty untuk tampilan
+          natural dan fresh.
+        </p>
+
+        <ul>
+
+          <li>♡ Natural makeup</li>
+
+          <li>♡ Skin-like base</li>
+
+          <li>♡ Soft blush</li>
+
+          <li>♡ Natural lip tint</li>
+
+          <li>♡ Simple skincare</li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- FASHION -->
+
+      <div class="recommendation-card">
+
+        <div class="recommendation-icon">
+          👗
+        </div>
+
+        <h3>
+          Fashion
+        </h3>
+
+        <p>
+          Inspirasi outfit clean look yang
+          simple tetapi tetap cute.
+        </p>
+
+        <ul>
+
+          <li>♡ Clean outfit</li>
+
+          <li>♡ Soft pink & cream</li>
+
+          <li>♡ Simple blouse</li>
+
+          <li>♡ Mini bag</li>
+
+          <li>♡ Ribbon accessories</li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- HEALING -->
+
+      <div class="recommendation-card">
+
+        <div class="recommendation-icon">
+          🌿
+        </div>
+
+        <h3>
+          Healing
+        </h3>
+
+        <p>
+          Tempat dan aktivitas untuk
+          refreshing setelah kuliah.
+        </p>
+
+        <ul>
+
+          <li>♡ Taman</li>
+
+          <li>♡ Wisata alam</li>
+
+          <li>♡ Rooftop</li>
+
+          <li>♡ Cafe tenang</li>
+
+          <li>♡ Journaling</li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- BUDGET -->
+
+      <div class="recommendation-card">
+
+        <div class="recommendation-icon">
+          💸
+        </div>
+
+        <h3>
+          Budget Friendly
+        </h3>
+
+        <p>
+          Ide lifestyle yang tetap seru
+          tanpa menguras kantong.
+        </p>
+
+        <ul>
+
+          <li>♡ Cafe di bawah Rp50 ribu</li>
+
+          <li>♡ Wisata di bawah Rp100 ribu</li>
+
+          <li>♡ Nongkrong murah</li>
+
+          <li>♡ Me-time hemat</li>
+
+          <li>♡ Short trip mahasiswa</li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- LEISURE -->
+
+      <div class="recommendation-card">
+
+        <div class="recommendation-icon">
+          ☕
+        </div>
+
+        <h3>
+          Leisure
+        </h3>
+
+        <p>
+          Aktivitas sederhana untuk
+          menikmati waktu sendiri.
+        </p>
+
+        <ul>
+
+          <li>♡ Coffee time</li>
+
+          <li>♡ Reading</li>
+
+          <li>♡ Watching movies</li>
+
+          <li>♡ Listening to music</li>
+
+          <li>♡ Self-care day</li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- LIFESTYLE -->
+
+      <div class="recommendation-card">
+
+        <div class="recommendation-icon">
+          🎀
+        </div>
+
+        <h3>
+          Lifestyle
+        </h3>
+
+        <p>
+          Inspirasi untuk membuat
+          keseharian terasa lebih menyenangkan.
+        </p>
+
+        <ul>
+
+          <li>♡ Morning routine</li>
+
+          <li>♡ Night skincare</li>
+
+          <li>♡ Journaling</li>
+
+          <li>♡ Self-care</li>
+
+          <li>♡ Slow living</li>
+
+        </ul>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    ♡ Made with love by Aulia Nur Oktapiyani ♡
+
+    <br>
+
+    Coquette · Lifestyle · Beauty · Fashion
+
+  </footer>
+
+
+</body>
+</html>
